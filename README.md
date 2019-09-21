@@ -37,3 +37,25 @@ class Product {
 String date = LocalDate.parse("2011-12-03").format(DateTimeFormatter.ISO_DATE_TIME);
 System.out.println(date);
 ```
+
+3.  限定符定义
+
+```
+abstract class Plnet{
+    protected void revolve(){  //n1
+    }
+    abstract void rotate();
+}
+
+class Earth extends  Plnet{
+
+    @Override
+    void revolve(){ //这里报错，是因为revolve()方法是受保护的，当方法是protected的时候无法进行覆盖成protected的，所以修改方法要么就是修改n1，要么是修改这个方法的限定符号为public。
+    }
+    @Override
+    void rotate() {
+    }
+}
+
+```
+
