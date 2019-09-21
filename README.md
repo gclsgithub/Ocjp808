@@ -59,3 +59,31 @@ class Earth extends  Plnet{
 
 ```
 
+4.  n1处MyCar()的 构造方法会调用其父类的构造方法，而MyVehicle有一个两个参数的构造函数，所以覆盖了无参数的构造函数，所以在n1处报错。
+
+```
+class MyVehicle {
+    String type = "4W";
+    int maxSpeed = 100;
+    MyVehicle(String type,int maxSpeed){
+            this.type = type;
+            this.maxSpeed = maxSpeed;
+    }
+}
+
+class MyCar extends  MyVehicle {
+
+    String trans;
+
+    MyCar(String trans){       //n1
+        this.trans = trans;
+    }
+
+    MyCar(String type, int maxSpeed,String trans) {
+        super(type, maxSpeed);
+        trans = trans;
+    }
+}
+
+```
+
