@@ -166,7 +166,11 @@ class DVD extends CD {
 QUESTION 15
 Which statement best describes encapsulation?
 A. Encapsulation ensures that classes can be designed so that only certain fields and methods of an object are accessible from other objects.
-B. Encapsulation ensures that classes can be designed so that their methods are inheritable.
-C. Encapsulation ensures that classes can be designed with some fields and methods declared as abstract.
+  //封装确保了类与类之间方法和域的独立性。
+B. Encapsulation ensures that classes can be designed so that their methods are inheritable.（继承的特性质）
+  //封装确保了类设计的可以被遗传
+C. Encapsulation ensures that classes can be designed with some fields and methods declared as abstract.（继承的特性质）
+ //封装确保了类的设计的抽象
 D. Encapsulation ensures that classes can be designed so that if a method has an argument MyType x, any subclass of MyType can be passed to that method.
+//方法的传递并不是封装的特性，可以理解为继承的特性
 ```
