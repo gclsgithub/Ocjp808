@@ -184,3 +184,28 @@ C. Encapsulation ensures that classes can be designed with some fields and metho
 D. Encapsulation ensures that classes can be designed so that if a method has an argument MyType x, any subclass of MyType can be passed to that method.
 //方法的传递并不是封装的特性，可以理解为继承的特性
 ```
+
+10 异常处理，异常氛围两种，运行时和检查。如果是运行时异常不需要自动抛出。检查异常需要代码中进行手动抛出，所以在n1处错误，
+
+```
+public class Demo11 {
+    public static void main(String[] args) {
+        Test1 te = new Test1();
+        int no = 12344;
+        te.readTest(no);//n1
+        te.chedk(no);
+
+    }
+}
+
+class Test1 {
+    void readTest(int no) throws Exception {
+        System.out.println("a");
+    }
+
+    void chedk(int no) throws RuntimeException {
+        System.out.println("vv");
+    }
+}
+
+```
