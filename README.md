@@ -105,3 +105,25 @@ public static void main(String[] args) {
     }
 
 ```
+
+6.replace方法是返回新的字符串，得到的结果才是被替换的。
+
+```
+
+    String ta  = "A ";
+    //A B
+    ta = ta.concat("B ");
+
+    String tb =  "C ";
+    ta = ta.concat(tb);
+
+    //A B C
+
+    //A B D
+    String relace = ta.replace('C','D');
+    //A B D C
+    ta = ta.concat(tb);
+    System.out.println(ta);
+    System.out.println(relace);
+        
+```
