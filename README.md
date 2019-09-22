@@ -87,3 +87,90 @@ class MyCar extends  MyVehicle {
 
 ```
 
+5. 对象比较，sb和s的比较调用Object.equals()，而就可以比较
+
+```
+
+public static void main(String[] args) {
+        StringBuilder sb = new StringBuilder(5);
+        String s = "";
+
+        if (sb.equals(s)){
+            System.out.println("Match 1");
+        } else if (sb.toString().equals(s.toString())){
+            System.out.println("Match 2");
+        } else {
+            System.out.println("No Match");
+        }
+    }
+
+```
+
+6.replace方法是返回新的字符串，得到的结果才是被替换的。
+
+```
+
+    String ta  = "A ";
+    //A B
+    ta = ta.concat("B ");
+
+    String tb =  "C ";
+    ta = ta.concat(tb);
+
+    //A B C
+
+    //A B D
+    String relace = ta.replace('C','D');
+    //A B D C
+    ta = ta.concat(tb);
+    System.out.println(ta);
+    System.out.println(relace);
+        
+```
+
+7.  n1处，如果构造DVD这个类就必须例化他的父类，但是又缺少无参数的构造方法。
+
+```
+class CD {
+    int r;
+    CD (int r){
+        this.r = r;
+    }
+}
+
+class DVD extends CD {
+    int c;
+    DVD(int r,int c){
+        super(r); //n1
+        this.c= c;
+    }
+}
+```
+8. 按照下标志打印数组
+
+```
+     /**
+     * Which option can replace N1 to enable the code to print 135?
+     * @param args
+     */
+    public static void main(String[] args) {
+        int a[] ={1,2,3,4,5};
+        for (int e = 0; e< 5 ; e+=2){ //N1
+            System.out.print(a[e]);
+        }
+    }
+```
+9. 这道题目比较有意思，是询问encapsulation（封装）的描述。题目本身比较简单，看看描述，A选项为正确选项
+
+```
+QUESTION 15
+Which statement best describes encapsulation?
+A. Encapsulation ensures that classes can be designed so that only certain fields and methods of an object are accessible from other objects.
+  //封装确保了类与类之间方法和域的独立性。
+B. Encapsulation ensures that classes can be designed so that their methods are inheritable.（继承的特性质）
+  //封装确保了类设计的可以被遗传
+C. Encapsulation ensures that classes can be designed with some fields and methods declared as abstract.（继承的特性质）
+ //封装确保了类的设计的抽象
+D. Encapsulation ensures that classes can be designed so that if a method has an argument MyType x, any subclass of MyType can be passed to that method.
+//方法的传递并不是封装的特性，可以理解为继承的特性
+```
