@@ -127,3 +127,22 @@ public static void main(String[] args) {
     System.out.println(relace);
         
 ```
+
+7.  n1处，如果构造DVD这个类就必须例化他的父类，但是又缺少无参数的构造方法。
+
+```
+class CD {
+    int r;
+    CD (int r){
+        this.r = r;
+    }
+}
+
+class DVD extends CD {
+    int c;
+    DVD(int r,int c){
+        super(r); //n1
+        this.c= c;
+    }
+}
+```
