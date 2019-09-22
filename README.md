@@ -160,8 +160,18 @@ class DVD extends CD {
         }
     }
 ```
-9. 这道题目比较有意思，是询问encapsulation（封装）的描述。题目本身比较简单，看看描述，A选项为正确选项
-
+9. 这道题目比较有意思，是询问encapsulation（封装）的描述。题目本身比较简单，看看描述，A选项为正确选项。
+JAVA程序三大特性是封装，继承和多态。
+    * 封装 （Encapsulation）
+        一种将抽象性函式接口的实现细节部份包装、隐藏起来的方法。而它利用的是public，private，default，protect这四种修饰符
+           * default (即默认，什么也不写）: 在同一包内可见，不使用任何修饰符。使用对象：类、接口、变量、方法。
+           * private : 在同一类内可见。使用对象：变量、方法。 注意：不能修饰类（外部类）
+           * public : 对所有类可见。使用对象：类、接口、变量、方法
+           * protected : 对同一包内的类和所有子类可见。使用对象：变量、方法。 注意：不能修饰类（外部类）。
+    * 继承 （Inheritable）
+        继承是java面向对象编程技术的一块基石，因为它允许创建分等级层次的类。继承就是子类继承父类的特征和行为，使得子类对象（实例）具有父类的实例域和方法，或子类从父类继承方法，使得子类具有父类相同的行为。注意，java中继承只能够继承共有成员方法和变量。
+    * 多态 （Polymorphism）
+       多态是同一个行为具有多个不同表现形式或形态的能力。多态就是同一个接口，使用不同的实例而执行不同操作，如图所示：
 ```
 QUESTION 15
 Which statement best describes encapsulation?
@@ -173,4 +183,29 @@ C. Encapsulation ensures that classes can be designed with some fields and metho
  //封装确保了类的设计的抽象
 D. Encapsulation ensures that classes can be designed so that if a method has an argument MyType x, any subclass of MyType can be passed to that method.
 //方法的传递并不是封装的特性，可以理解为继承的特性
+```
+
+10 异常处理，异常氛围两种，运行时和检查。如果是运行时异常不需要自动抛出。检查异常需要代码中进行手动抛出，所以在n1处错误，
+
+```
+public class Demo11 {
+    public static void main(String[] args) {
+        Test1 te = new Test1();
+        int no = 12344;
+        te.readTest(no);//n1
+        te.chedk(no);
+
+    }
+}
+
+class Test1 {
+    void readTest(int no) throws Exception {
+        System.out.println("a");
+    }
+
+    void chedk(int no) throws RuntimeException {
+        System.out.println("vv");
+    }
+}
+
 ```
