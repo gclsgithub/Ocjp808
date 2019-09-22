@@ -146,3 +146,19 @@ class DVD extends CD {
     }
 }
 ```
+8. 按照下标志打印数组
+
+```
+     /**
+     * Which option can replace N1 to enable the code to print 135?
+     * @param args
+     */
+    public static void main(String[] args) {
+        int a[] ={1,2,3,4,5};
+        for (int e = 0; e< 5 ; e+=2){ //N1
+            System.out.print(a[e]);
+        }
+    }
+```
+
+
