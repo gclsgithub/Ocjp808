@@ -242,3 +242,10 @@ D. Improves the program structure because exceptions must be handled in the meth
 E. Allows the creation of new exceptions that are tailored to the particular program being created
 //允许根据特定的情况创建新的特定的异常
 ```
+
+13 javac是编译，java是运行，注意运行的时候不需要运行字节码文件
+
+```
+javac A.java
+java  A    [parm1,param2]
+```
