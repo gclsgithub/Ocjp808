@@ -224,3 +224,21 @@ switch (str){
 }
 System.out.println("AA");
 ```
+
+12 选择正确的叙述，答案
+
+```
+
+Which three are advantages of the Java exception mechanism? (Choose three.)   （ACE）
+//下面哪三个是java异常机制的优势
+A. Improves the program structure because the error handling code is separated from the normal program function
+//改善程序结构，因为错误处理代码和正常程序代码隔离开了。
+B. Provides a set of standard exceptions that covers all the possible errors
+//提供了一套的标准异常，它包换了所有可能的错误。
+C. Improves the program structure because the programmer can choose where to handle exceptions
+//改善程序构造，因为程序员可以自己决定在哪里处理异常。
+D. Improves the program structure because exceptions must be handled in the method in which they occurred
+//改善程序构造，因为异常能够在发生的时候就被处理
+E. Allows the creation of new exceptions that are tailored to the particular program being created
+//允许根据特定的情况创建新的特定的异常
+```
