@@ -250,3 +250,23 @@ javac A.java;
 java  A    [parm1,param2];
 javap -c A.class 反编译；
 ```
+
+14 LocaDateTime相关
+
+```
+        LocalDate date1 = LocalDate.now();
+
+        LocalDate date2 = LocalDate.of(2014,6,20);
+
+        LocalDate date3 = LocalDate.parse("2014-06-20", DateTimeFormatter.ISO_DATE);
+
+        System.out.println(date1);
+
+        System.out.println(date2);
+
+        System.out.println(date3);
+
+print -> 2014-06-20   假设今天是2014-06-20
+         2014-06-20
+         2014-06-20
+```
