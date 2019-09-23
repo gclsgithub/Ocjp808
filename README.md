@@ -209,3 +209,18 @@ class Test1 {
 }
 
 ```
+11  1.5之前，switch支持的数据类型只有byte，int，short，char这四种；
+    1.5之后支持这四种类型的包装了，1.7之后支持string。但是从来没有支持boolean类型
+```
+ //boolean str = true;
+
+String str= "true";
+switch (str){
+    case "true":
+        System.out.println("TRUE");
+        break;
+        default:
+            System.out.println("****");
+}
+System.out.println("AA");
+```
