@@ -225,11 +225,11 @@ switch (str){
 System.out.println("AA");
 ```
 
-12 选择正确的叙述，答案
+12 选择正确的叙述，答案（ACE）
 
 ```
 
-Which three are advantages of the Java exception mechanism? (Choose three.)   （ACE）
+Which three are advantages of the Java exception mechanism? (Choose three.)   
 //下面哪三个是java异常机制的优势
 A. Improves the program structure because the error handling code is separated from the normal program function
 //改善程序结构，因为错误处理代码和正常程序代码隔离开了。
