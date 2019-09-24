@@ -318,3 +318,26 @@ public class Demo19 {
     }
 }
 ```
+
+17  定义题 BEF
+
+```
+Which three statements describe the object-oriented features of the Java language? (Choose three.)
+//下面三个叙述中选三个符合java面向对象语言的特征。
+A. Objects cannot be reused. //对象不能被再生（重用）
+B. A subclass can inherit from a superclass. //一个子类可以继承父类
+C. Objects can share behaviors with other objects. //一个对象可以和其他对象一起分享行为
+D. A package must contain more than one class. //一个包弥补包含超过一个class
+E. Object is the root class of all other objects.// Object类是所有类的父类
+F. A main method must be declared in every class.//一个主方法必须在每个方法中被申明
+```
+
+18 数组获取长度是.length,字符串获取长度.length()
+
+```
+public static void main(String[] args) {
+    String [] plantes = {"Mercury","Venus","Earth","Mars"};
+    System.out.println(plantes.length);
+    System.out.println(plantes[1].length());
+}
+```
