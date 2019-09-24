@@ -298,3 +298,23 @@ print -> 2014-06-20   假设今天是2014-06-20
 
         System.out.println(str6 == str1);  //true  查找是否存在相同的变量
 ```
+
+16 静态变量在类的初始化之前就已经被初始化
+```
+public class Demo19 {
+    public static void main(String[] args) {
+        Demo19 demo19 = new Demo19();
+
+        System.out.println(flag);
+
+        flag = doRevert();
+
+        System.out.println(flag);
+    }
+    public static  boolean flag = false;
+
+    public static  Boolean  doRevert (){
+        return !flag;
+    }
+}
+```
