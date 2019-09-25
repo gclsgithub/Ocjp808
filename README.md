@@ -359,3 +359,18 @@ public static void main(String[] args) {
         System.out.println("ready to use");
     }
 ```
+
+20 还是一个返回的问题，trim（）方法返回一个删除空格的字符串，但是对自己本身是没有影响的
+```
+       //three space
+        String str = "   ";
+
+        String str2 = str.trim();
+
+        System.out.println(str.equals(""));  //false
+        System.out.println(str.isEmpty());   //false
+
+
+        System.out.println(str2.equals(""));  //true
+        System.out.println(str2.isEmpty());   //true
+```
