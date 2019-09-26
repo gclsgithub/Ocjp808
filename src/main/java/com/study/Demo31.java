@@ -17,5 +17,15 @@ public class Demo31 {
 
         Integer[] arrInt2 = {1,2,3,4};
         Arrays.asList(arrInt2).forEach(System.out::println);
+
+        List list=Arrays.asList(arrInt);
+        for (int i= 0;i<list.size();i++){
+            if (i == 0 ){
+                list.remove(i);
+            }
+        }
+        for (int i= 0;i<list.size();i++){
+            System.out.println(list.get(i));
+        }
     }
 }
