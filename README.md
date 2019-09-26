@@ -466,4 +466,21 @@ Arrays.asList(arrInt2).forEach(System.out::println);
 2
 3
 4
+
+/**尝试去修改生成的list,原声类型生成的是Arrays下面的内部类ArrayList,其类型是final的 */
+List list=Arrays.asList(arrInt);
+for (int i= 0;i<list.size();i++){
+    if (i == 0 ){
+        list.remove(i);
+    }
+}
+for (int i= 0;i<list.size();i++){
+    System.out.println(list.get(i));
+}
+
+-------output-----
+
+Exception in thread "main" java.lang.UnsupportedOperationException
+at java.util.AbstractList.remove(AbstractList.java:161)
+at com.study.Demo31.main(Demo31.java:24)
 ```
