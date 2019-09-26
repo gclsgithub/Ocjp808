@@ -424,3 +424,46 @@ class Car2 extends  Vehicle1 {
     }
 }
 ```
+
+23   重写toString()方法，打印的就是toString（）
+
+```
+class MyString {
+    String msg ;
+    MyString (String msg){
+        this.msg= msg;
+    }
+
+    /**
+     * toString() 方法
+     * @return
+     */
+    @Override
+    public String toString() {
+        return msg.toString();
+    }
+}
+
+public class Demo28 {
+    public static void main(String[] args) {
+        System.out.println("Hello " + new StringBuffer("JAVA SE 8"));
+        System.out.println("Hello " + new  MyString("JAVA SE 8"));
+    }
+}
+```
+24  如果数组是基础类型的使用Arrays.asList()方法生成的就是一个[][]二维数组,基础类型的才是生成的数组
+
+```
+int[] arrInt = {12,14,19,20};
+Arrays.asList(arrInt).forEach(System.out::println);
+
+Integer[] arrInt2 = {1,2,3,4};
+Arrays.asList(arrInt2).forEach(System.out::println);
+
+----out---
+[I@75bd9247
+1
+2
+3
+4
+```
