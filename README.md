@@ -359,3 +359,111 @@ public static void main(String[] args) {
         System.out.println("ready to use");
     }
 ```
+
+20 还是一个返回的问题，trim（）方法返回一个删除空格的字符串，但是对自己本身是没有影响的
+```
+       //three space
+        String str = "   ";
+
+        String str2 = str.trim();
+
+        System.out.println(str.equals(""));  //false
+        System.out.println(str.isEmpty());   //false
+
+
+        System.out.println(str2.equals(""));  //true
+        System.out.println(str2.isEmpty());   //true
+```
+21    n2如果换成n1就会报空指针异常。因为初期化数组没有申明类型。
+
+```
+        //String[] strs = {"a","b"};  n1
+
+        String[] strs = new String[2]; //n2
+        int index = 0;
+
+        for (String str : strs){
+            strs[index].concat(" element " + index);
+            index++;
+        }
+
+        for (index = 0;index < strs.length ;index++){
+            System.out.println(strs[index]);
+        }
+```
+22   this和super都要定义在第一行，所以只能有一个；先说super，因为子类继承了父类的属性和方法，所以在先初始化父类的属性和方法，这样子类才可以初始化自己特有的，因为java中不允许调用没有初始化的成员。
+this就是调用本类的其他构造函数，在其他构造函数中也有默认的super()，或者自定义了带参的super，这样就初始化了父类的成员了，所以写了this的构造函数不能再写super了，因为实例化一个对象运行两次super是不安全的。this放在第一行，也是因为要先初始化父类和this代表的构造函数先，因为当前构造函数可能用到那些成员，所以那些成员得要先初始化。
+————————————————
+版权声明：本文为CSDN博主「二十六画生的博客」的原创文章，遵循 CC 4.0 BY-SA 版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/u010002184/article/details/51103935
+
+```
+class Vehicle1 {
+    int x;
+    Vehicle1(){
+        this(10);
+    }
+    Vehicle1(int x) {
+        this.x = x;
+    }
+}
+
+class Car2 extends  Vehicle1 {
+    int y ;
+    Car2 (){
+        super();
+        this(20);
+    }
+    Car2 (int y ) {
+        this.y  = y;
+    }
+
+    @Override
+    public String toString(){
+        return  super.x + ":" +this.y;
+    }
+}
+```
+
+23   重写toString()方法，打印的就是toString（）
+
+```
+class MyString {
+    String msg ;
+    MyString (String msg){
+        this.msg= msg;
+    }
+
+    /**
+     * toString() 方法
+     * @return
+     */
+    @Override
+    public String toString() {
+        return msg.toString();
+    }
+}
+
+public class Demo28 {
+    public static void main(String[] args) {
+        System.out.println("Hello " + new StringBuffer("JAVA SE 8"));
+        System.out.println("Hello " + new  MyString("JAVA SE 8"));
+    }
+}
+```
+24  如果数组是基础类型的使用Arrays.asList()方法生成的就是一个[][]二维数组,基础类型的才是生成的数组
+
+```
+int[] arrInt = {12,14,19,20};
+Arrays.asList(arrInt).forEach(System.out::println);
+
+Integer[] arrInt2 = {1,2,3,4};
+Arrays.asList(arrInt2).forEach(System.out::println);
+
+----out---
+[I@75bd9247
+1
+2
+3
+4
+```
