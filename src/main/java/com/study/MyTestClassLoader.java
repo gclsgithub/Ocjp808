@@ -84,6 +84,14 @@ public class MyTestClassLoader extends ClassLoader {
         return data;
     }
 
+    /**
+     * 测试代码
+     *
+     * @param classLoader
+     * @throws ClassNotFoundException
+     * @throws IllegalAccessException
+     * @throws InstantiationException
+     */
     public void test(ClassLoader classLoader) throws ClassNotFoundException, IllegalAccessException, InstantiationException {
         Class<?> clazz = loadClass("com.study.Demo02");
         Demo02 demo02 = (Demo02) clazz.newInstance();
