@@ -85,7 +85,7 @@ public class MyTestClassLoader extends ClassLoader {
     }
 
     /**
-     * 测试代码
+     * 测试代码,创建实例
      *
      * @param classLoader
      * @throws ClassNotFoundException
