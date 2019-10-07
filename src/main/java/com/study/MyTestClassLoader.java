@@ -110,8 +110,5 @@ public class MyTestClassLoader extends ClassLoader {
         MyTestClassLoader myTestClassLoader = new MyTestClassLoader("loader1");
 
         myTestClassLoader.test(myTestClassLoader);
-
     }
-
-
 }
