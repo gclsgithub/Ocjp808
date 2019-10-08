@@ -484,3 +484,6 @@ Exception in thread "main" java.lang.UnsupportedOperationException
 at java.util.AbstractList.remove(AbstractList.java:161)
 at com.study.Demo31.main(Demo31.java:24)
 ```
+
+
+25 通过池维持对象的创建是一个非常不适合的行为,除非这个对象十分重要.正确的使用对象池的例子就是数据库连接池,建立数据库连接对象十分昂贵所以使用对象池
