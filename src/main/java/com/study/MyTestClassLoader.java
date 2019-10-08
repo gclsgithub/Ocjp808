@@ -50,6 +50,11 @@ public class MyTestClassLoader extends ClassLoader {
         return this.defineClass(name, data, 0, data.length - 1);
     }
 
+    /**
+     * 根据二进制文件名字,将对应的文件以输入输出流的形式返回一个二进制文件信息
+     * @param binaryName
+     * @return
+     */
     public byte[] loadClassData(String binaryName) {
 
         InputStream is = null;
