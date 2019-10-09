@@ -34,7 +34,7 @@ public class MyStack {
 
 
     /**
-     * 过量扩容
+     * 超过容量扩容
      */
     private void ensureCaoacity() {
         if (elements.length >= DEFAULT_INITAL_CAPACITY){
